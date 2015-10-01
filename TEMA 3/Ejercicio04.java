@@ -17,7 +17,7 @@ public class Ejercicio04 {
     System.out.println("La suma de estos números es " + (x1 + x2));
     System.out.println("La resta de estos números es " + (x1 - x2));
     System.out.println("La multiplicación de estos números es " + x1 * x2);
-    System.out.println("La división de estos números es " + x1 / x2);
+    System.out.println("La división de estos números es " + (double) x1 / x2);
 
 
 

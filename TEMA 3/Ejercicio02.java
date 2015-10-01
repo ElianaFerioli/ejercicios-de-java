@@ -9,7 +9,7 @@ public class Ejercicio02 {
     String linea;
 
     System.out.print("Por favor, introduce una cantidad de euros: ");
-    int x = Integer.parseInt(System.console().readLine());
+    double x = Double.parseDouble(System.console().readLine());
 
     System.out.printf("La cantidad de Pesetas es: %.1f", x * 166.38 );
  
