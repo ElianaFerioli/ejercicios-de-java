@@ -1,7 +1,5 @@
 /**
- * Muestra por pantalla la frase "ELiana Mariel Ferioli Núñez"
- *
- * @author Luis J. Sánchez
+ * @author Eliana Ferioli
  */
 
 public class Ejercicio05 { // Clase principal

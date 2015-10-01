@@ -1,8 +1,7 @@
 /**
-* Lectura de datos desde teclado usando la clase Scanner
-*
-* @author Luis J. Sánchez
-*/
+ * 
+ * @author Eliana Ferioli
+ */
 
 import java.util.Scanner;
 

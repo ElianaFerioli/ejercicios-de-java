@@ -1,7 +1,6 @@
 /**
- * Uso de variables enteras
- *
- * @author Luis J. Sánchez
+ * 
+ * @author Eliana Ferioli
  */
  
 public class Ejercicio01 {

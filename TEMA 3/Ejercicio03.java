@@ -1,8 +1,7 @@
 /**
-* Lectura de datos desde teclado
-*
-* @author Luis J. Sánchez
-*/
+ * 
+ * @author Eliana Ferioli
+ */
 
 public class Ejercicio03 {
   public static void main(String[] args) {
