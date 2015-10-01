@@ -1,0 +1,23 @@
+/**
+ * Muestra por pantalla la frase "ELiana Mariel Ferioli Núñez"
+ *
+ * @author Luis J. Sánchez
+ */
+
+public class Ejercicio04 { // Clase principal
+  public static void main(String[] args) {
+  
+    String rojo = "\033[31m";
+    String verde = "\033[32m";
+    String naranja = "\033[33m";
+    String azul = "\033[34m";
+    String morado = "\033[35m";
+    String blanco = "\033[37m";
+ 
+    System.out.println("Lunes \t" + rojo + "FOL FOL FOL" + verde + "PROG " + naranja + "ED");
+    System.out.println("Martes \t");
+    System.out.println("Miércoles");
+    System.out.println("Jueves");
+    System.out.println("Viernes");
+  }
+}
