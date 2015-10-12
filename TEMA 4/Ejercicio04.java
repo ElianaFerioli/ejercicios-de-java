@@ -15,7 +15,7 @@ public class Ejercicio04 {
     double extras = x-40;
     double total = (40 * 12) + (extras * 16); 
     
-    System.out.println("El total del salario semanal es: " + total);
+    System.out.println("El total del salario semanal es: " + total + " euros.");
   }
 }
 }

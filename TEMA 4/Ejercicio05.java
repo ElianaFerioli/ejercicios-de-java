@@ -15,8 +15,8 @@ public class Ejercicio05 {
     
     if (a == 0){
       System.out.println("No es posible resolver la ecuación.");
-    }
-
+    } else {    
     System.out.println("El resultado de la ecuación es: " + (-b/a));
+    }
   }
 }

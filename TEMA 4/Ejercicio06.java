@@ -10,9 +10,12 @@ public class Ejercicio06 {
     System.out.print("Introduce la altura: ");
     double h = Double.parseDouble(System.console().readLine());
     
-    double x = (2 * h)/9.81;
-    
-    System.out.printf("El tiempo que tarda en caer es: %.2f", Math.sqrt(x));
-    System.out.println("m/s2");
+    if (h > 0) {
+      double x = (2 * h)/9.81;
+      System.out.printf("El tiempo que tarda en caer es: %.2f", Math.sqrt(x));
+      System.out.println("m/s2");
+    } else {
+        System.out.println("Altura no válida");
+      }
   }
 }

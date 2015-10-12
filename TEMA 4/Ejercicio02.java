@@ -11,14 +11,14 @@ public class Ejercicio02 {
     if ((x >= 6) && (x <= 12)) {
       System.out.println("Buenos dias!");
     }
-    if ((x >= 13) && (x <= 20)) {
+    if ((x > 12) && (x <= 20)) {
       System.out.println("Buenas tardes!");
     } 
-    if ((x >= 21) && (x <= 5)) {
+    if (((x > 20) && (x <= 24))||((x >= 0) && (x <= 5))) {
       System.out.println("Buenas noches!");
     }
     if (x > 24){
-      System.out.println("La hora introducida no es correcta.");
+      System.out.println("La hora introducida no es válida.");
     }
   }
 }

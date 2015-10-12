@@ -6,22 +6,20 @@
 public class Ejercicio01 {
   public static void main(String[] args) {
     System.out.print("Por favor, introduce un día de la semana: ");
-    String linea = System.console().readLine();
+    String linea = System.console().readLine().toLowerCase();
 
-    if (linea.equals("Lunes")) {
-      System.out.println("El lunes hay FOL-FOL-FOL-PROG-ED-ED.");
-    }
-    if (linea.equals("Martes")) {
-      System.out.println("El martes hay PROG-PROG-PROG-BBDD-BBDD-BBDD.");
-    }
-    if (linea.equals("Miercoles")) {
-      System.out.println("El miercoles hay SIN-SIN-SIN-SIN-LM-LM.");
-    }
-    if (linea.equals("Jueves")) {
-      System.out.println("El jueves hay PROG-PROG-PROG-ED-LM-LM.");
-    }
-    if (linea.equals("Viernes")) {
-      System.out.println("El viernes hay BBDD-BBDD-BBDD-PROG-SIN-SIN.");
+    if (linea.equals("lunes")) {
+      System.out.println("El lunes a primera hora hay FOL.");
+    } else if (linea.equals("martes")) {
+      System.out.println("El martes a primera hora hay PROGRAMACION.");
+    } else if (linea.equals("miercoles")) {
+      System.out.println("El miercoles a primera hora hay SIN.");
+    } else if (linea.equals("jueves")) {
+      System.out.println("El jueves a primera hora hay PROGRAMACION.");
+    } else if (linea.equals("viernes")) {
+      System.out.println("El viernes a primera hora hay BBDD.");
+    } else {
+      System.out.println("Día no válido");
     }
   }
 }
