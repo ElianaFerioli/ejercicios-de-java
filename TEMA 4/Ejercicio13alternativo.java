@@ -3,7 +3,7 @@
 * @author Eliana Ferioli
 */
 
-public class Ejercicio04alternativo {
+public class Ejercicio13alternativo {
   public static void main(String[] args) {
     System.out.println("Este programa ordena tres números introducidos por teclado.");
     

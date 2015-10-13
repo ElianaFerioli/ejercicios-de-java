@@ -48,7 +48,6 @@ public class Ejercicio13 {
       segundonumero = x3;
       }
     }
-      
   System.out.println("Los números introducidos en orden son: " + primernumero + "-" + segundonumero + "-" + tercernumero);
   }
 }
