@@ -7,9 +7,7 @@ public class Ejercicio17 {
     System.out.println("Este programa descubre cuál es la última cifra del número introducido.");
     
     System.out.print("Introduce un número: ");
-    int x1 = Integer.parseInt(System.console().readLine());
-    
+    long x1 = Long.parseLong(System.console().readLine());
     System.out.println("La última cifra es: " + (x1 % 10));
-    
   }
 }

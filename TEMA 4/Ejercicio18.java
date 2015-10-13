@@ -7,7 +7,7 @@ public class Ejercicio18 {
     System.out.println("Este programa descubre cuál es la primera cifra del número introducido \nSe permiten números de hasta cinco cifras.");
     
     System.out.print("Introduce un número: ");
-    int x1 = Integer.parseInt(System.console().readLine());
+    int x1 = Math.abs(Integer.parseInt(System.console().readLine()));
     int primercifra = 0;
     
     if (x1 < 10) {

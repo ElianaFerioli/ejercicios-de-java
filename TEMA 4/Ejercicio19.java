@@ -7,7 +7,7 @@ public class Ejercicio19 {
     System.out.println("Este programa descubre cuántos dígitos tiene el número introducido \nSe permiten números de hasta cinco cifras.");
     
     System.out.print("Introduce un número: ");
-    int x1 = Integer.parseInt(System.console().readLine());
+    int x1 = Math.abs(Integer.parseInt(System.console().readLine()));
     int numcifra = 0;
     
     if (x1 < 10) {

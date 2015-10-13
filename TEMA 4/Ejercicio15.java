@@ -1,5 +1,4 @@
-/**
- * Sentencia múltiple (switch) 
+/** 
  *
  * @author Eliana Ferioli
  */

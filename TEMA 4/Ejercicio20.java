@@ -7,7 +7,7 @@ public class Ejercicio20 {
     System.out.println("Este programa descubre si un número es capicúa.\nSe permiten números de hasta cinco cifras.");
     
     System.out.print("Introduce un número: ");
-    int x1 = Integer.parseInt(System.console().readLine());
+    int x1 = Math.abs(Integer.parseInt(System.console().readLine()));
     int numcifra = 0;
     
     if (x1 < 10) {
