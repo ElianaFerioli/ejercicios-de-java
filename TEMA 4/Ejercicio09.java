@@ -37,9 +37,9 @@ public class Ejercicio09 {
         double parcialraizcompleta = Math.sqrt(parcialraiz);    
         double x1 = (-b + (parcialraizcompleta))/parcialdivisor;
         double x2 = (-b - (parcialraizcompleta))/parcialdivisor;    
-          if (x1 == x2) {
+        if (x1 == x2) {
           System.out.println("X es : " + x1);
-          } else {
+        } else {
           System.out.println("X1 es " + x1);
           System.out.println("X2 es " + x2);
           }

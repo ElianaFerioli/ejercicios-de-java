@@ -15,19 +15,22 @@ public class Ejercicio08 {
     double x3 = Double.parseDouble(System.console().readLine());
     
     double notamedia = ((x1 + x2 + x3) / 3);
-    
-    if ((notamedia >= 0) && (notamedia < 5)) {
-    System.out.println("La nota del boletin es: insuficiente");
-    } else if ((notamedia >= 5) && (notamedia < 6)) {
-    System.out.println("La nota del boletin es: suficiente");
-    } else if ((notamedia >= 6) && (notamedia < 7)) {
-    System.out.println("La nota del boletin es: bien");
-    } else if ((notamedia >= 7) && (notamedia < 9)) {
-    System.out.println("La nota del boletin es: notable");
-    } else if ((notamedia >= 9) && (notamedia <= 10)) {
-    System.out.println("La nota del boletin es: sobresaliente");
+    if ((x1 >=0) && (x1 <= 10) &&
+        (x2 >=0) && (x2 <= 10) &&
+        (x3 >=0) && (x3 <= 10)) {
+        if ((notamedia >= 0) && (notamedia < 5)) {
+          System.out.println("La nota del boletin es: insuficiente");
+        } else if ((notamedia >= 5) && (notamedia < 6)) {
+          System.out.println("La nota del boletin es: suficiente");
+        } else if ((notamedia >= 6) && (notamedia < 7)) {
+          System.out.println("La nota del boletin es: bien");
+        } else if ((notamedia >= 7) && (notamedia < 9)) {
+          System.out.println("La nota del boletin es: notable");
+        } else if ((notamedia >= 9) && (notamedia <= 10)) {
+          System.out.println("La nota del boletin es: sobresaliente");
+        } 
     } else {
-      System.out.println("La nota no es correcta.");
+      System.out.println("Alguna de las notas introducidas no son correctas");
+    }
     }      
   }
-}
