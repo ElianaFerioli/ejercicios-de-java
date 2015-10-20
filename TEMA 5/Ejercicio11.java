@@ -5,7 +5,7 @@
  */
 public class Ejercicio11 {
   public static void main(String[] args) {
-    System.out.println("Por favor, introducir un número y se mostrará el cubo y el cuadrado de los cinco siguientes.");
+    System.out.print("Por favor, introducir un número y se mostrará el cubo y \nel cuadrado de los cinco siguientes: ");
     int x = Integer.parseInt(System.console().readLine());
     int fin = x + 5;
     

@@ -5,7 +5,7 @@
  */
 public class Ejercicio13 {
   public static void main(String[] args) {
-    System.out.println("Por favor, introducir diez números.");
+    System.out.println("Por favor, introducir diez números:");
     int x = 1;
     int positivos = 0;
     int negativos = 0;

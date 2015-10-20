@@ -6,7 +6,7 @@
 public class Ejercicio09 {
   public static void main(String[] args) {
     
-    System.out.println("Introduce un número entero: ");
+    System.out.print("Introduce un número entero: ");
     int num = Integer.parseInt(System.console().readLine());
     int x = 1;
     int cifra = 1;

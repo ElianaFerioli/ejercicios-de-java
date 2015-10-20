@@ -6,10 +6,11 @@ public class Ejercicio15 {
   public static void main(String[] args) {
     System.out.println("Este programa calculará las potencias comprendidas entre la base y el exponente \nde un número introducido.");
     System.out.print("Por favor, introducir una base: ");
-    int base = Integer.parseInt(System.console().readLine());
+    double base = Double.parseDouble(System.console().readLine());
     System.out.print("Por favor, introducir un exponente (entero y positivo): ");
     int exponente = Integer.parseInt(System.console().readLine());
-    int potencia = 0;
+    double potencia = 0;
+    
     if (exponente == 0) {
        System.out.println("Para el número " + base + " exponente " + exponente + " el resultado es: 1");
       } else {

@@ -5,7 +5,7 @@
  */
 public class Ejercicio21 {
   public static void main(String[] args) {
-    System.out.println("Por favor, introducir números.\nEL programa finalizará cuando se introduzca un número negativo.");
+    System.out.println("Por favor, introducir números.\nEl programa finalizará cuando se introduzca un número negativo.");
     int cantidad = 0;
     double impares = 0;
     double sumaimpares = 0;

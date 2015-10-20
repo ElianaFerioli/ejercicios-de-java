@@ -4,7 +4,7 @@
  */
 public class Ejercicio17 {
   public static void main(String[] args) {
-    System.out.println("Este programa calcula la suma de los 100 números siguientes al número introducido.");
+    System.out.println("Este programa calcula la suma de los 100 números siguientes \nal número introducido.");
     System.out.print("Por favor, introducir un número: ");
     int num = Integer.parseInt(System.console().readLine());
     int x = 1;
