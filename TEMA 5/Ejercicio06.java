@@ -8,7 +8,7 @@ public class Ejercicio06 {
     
     int i = 320;
     
-    do{
+    do {
       System.out.println(i);
       i = i - 20;
     } while (i >= 160);

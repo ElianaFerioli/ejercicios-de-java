@@ -3,13 +3,16 @@
  *
  * @author ELiana Ferioli
  */
-public class Ejercicio07 {
+public class Ejercicio07boolean {
   public static void main(String[] args) {
     
-    System.out.println("Descubre la contraseña de la caja fuerte.");
-    System.out.println("Son cuatro dígit //os y tienes cuatro oportunidades.");
+    int i = 0;
+    boolean salir = false;
     
-    for (int i = 1; i <= 4; i++) {
+    System.out.println("Descubre la contraseña de la caja fuerte.");
+    System.out.println("Son cuatro dígitos y tienes cuatro oportunidades.");
+    
+    do {
       System.out.println("Dime el primer número: ");
       int x1 = Integer.parseInt(System.console().readLine());
       System.out.println("Dime el segundo número: ");
@@ -21,10 +24,12 @@ public class Ejercicio07 {
       
       if ((x1 == 1) && (x2 == 1) && (x3 == 1) && (x4 ==1)){
         System.out.println("La caja fuerte se ha abierto sactifactoriamente.");
-        i = 4; //en un bucle for no se debe modificar la variable del bucle. 
+        salir = true;
       } else {
         System.out.println("Lo siento, esa no es la combinación.");
-      }
-    }
+        i++;
+      } 
+      
+    } while ((i < 4) && (!salir));
   }
 }

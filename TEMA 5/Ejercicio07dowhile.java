@@ -3,13 +3,16 @@
  *
  * @author ELiana Ferioli
  */
-public class Ejercicio07 {
+public class Ejercicio07dowhile {
   public static void main(String[] args) {
     
-    System.out.println("Descubre la contraseña de la caja fuerte.");
-    System.out.println("Son cuatro dígit //os y tienes cuatro oportunidades.");
+    int i = 0;
     
-    for (int i = 1; i <= 4; i++) {
+    System.out.println("Descubre la contraseña de la caja fuerte.");
+    System.out.println("Son cuatro dígitos y tienes cuatro oportunidades.");
+    
+    do {
+      i++;
       System.out.println("Dime el primer número: ");
       int x1 = Integer.parseInt(System.console().readLine());
       System.out.println("Dime el segundo número: ");
@@ -24,7 +27,8 @@ public class Ejercicio07 {
         i = 4; //en un bucle for no se debe modificar la variable del bucle. 
       } else {
         System.out.println("Lo siento, esa no es la combinación.");
-      }
-    }
+      } 
+      
+    } while (i < 4);
   }
 }

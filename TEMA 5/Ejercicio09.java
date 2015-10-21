@@ -5,7 +5,7 @@
  */
 public class Ejercicio09 {
   public static void main(String[] args) {
-    
+    // este programa no contempla el 0
     System.out.print("Introduce un número entero: ");
     int num = Integer.parseInt(System.console().readLine());
     int x = 1;
