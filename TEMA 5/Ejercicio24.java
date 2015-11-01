@@ -19,7 +19,6 @@ public class Ejercicio24 {
         System.out.print(" ");
       }
       
-      
       for (i = 1; i < altura * 2; i++) {
         
         if ( i <= altura) {

@@ -8,7 +8,7 @@ public class Ejercicio17 {
     System.out.print("Por favor, introducir un número: ");
     int num = Integer.parseInt(System.console().readLine());
     int x = 1;
-    long suma = 0;
+    int suma = 0;
     
     if (num >= 0) {
         while (x <= 100) {

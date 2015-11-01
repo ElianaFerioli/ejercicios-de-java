@@ -19,7 +19,7 @@ public class Ejercicio16 {
       x++;
     } while (x <= num);
     
-    if (suma == 2) {
+    if ((suma == 2)||(num == 1)) {
       System.out.println("El número " + num + " es un número primo.");
     } else {
       System.out.println("El número " + num + " no es un número primo.");
