@@ -3,7 +3,7 @@
  *
  * @author Eliana Ferioli
  */
-public class Piramide_horizontal_hueca {
+public class Piramide_horizontal_vertice_iz_hueca {
   public static void main(String[] args) {
     System.out.println("Este programa dibuja una piramide horizontal.");
     System.out.print("Por favor, introduzca la altura de la piramide: ");
