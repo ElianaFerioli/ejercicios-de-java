@@ -3,7 +3,7 @@
  *
  * @author Eliana Ferioli
  */
-public class Pecera {
+public class Ejercicio01{
   public static void main(String[] args) {
     System.out.println("Este programa muestra una pecera con un pez. \nLa altura recomendada es 50 y la anchura 7.");
     System.out.print("Introduce la longitud de la pecera: ");
