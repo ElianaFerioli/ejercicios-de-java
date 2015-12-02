@@ -18,6 +18,13 @@ public class Ejercicio10 {
       num[x] = (int)(Math.random()*101);
     }   //crea los números
     
+    //Muestra los números generados
+    System.out.print("Los números generados son: ");
+    for (int x = 0; x < 20; x++) {
+      System.out.print(num[x] + " ");
+    }
+    System.out.println();
+    
     for (int n : num) {
       if ((n % 2) == 0) {
         nuevo[i] = n;

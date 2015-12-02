@@ -17,7 +17,8 @@ public class Ejercicio05 {
       System.out.print("Por favor, introduzca un número: ");
       num[x] = Integer.parseInt(System.console().readLine());
       if (x == 0) {
-        min = num[x];
+        min = num[x];     //Se inicializan el máximo y el mínimo con el primer número introducido
+        max = num[x];
       }
       if (num[x] > max) {
         max = num[x];

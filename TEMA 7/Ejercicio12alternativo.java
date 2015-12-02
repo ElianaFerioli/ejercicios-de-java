@@ -8,13 +8,11 @@ para que no se pierda ninguno. Al final se debe mostrar el array resultante.
  *
  * @author Eliana Ferioli
  */
-public class Ejercicio12 {
+public class Ejercicio12alternativo {
   public static void main(String[] args) {
     System.out.println("Este programa genera un nuevo array a partir de una posición final y una inicial indicada.");
     System.out.println("Por favor, introduzca los números que componen el array incial: ");
-    
-    int[] num = new int [10];
-    int[] nuevo = new int [10];
+    int num[] = new int [10];
     
       for (int x = 0; x < 10; x++) {
         System.out.print(x + ". Por favor, introduzca un número: ");
@@ -30,42 +28,41 @@ public class Ejercicio12 {
         System.out.print("Los datos introducidos no son correctos.");
         System.out.print("La posición inicial debe ser menor a la final y ambos deben estar entre 0 y 9.");
       } else {
+        //Muestra el array inicial
+        System.out.print("El array inicial es: ");
+        for (int x = 0; x < 10; x++) {
+          System.out.print(num[x] + " ");
+        }
+        System.out.println();
+        //
         
-          //Muestra el array inicial
-          System.out.print("El array inicial es: ");
-          for (int x = 0; x < 10; x++) {
-            System.out.print(num[x] + " ");
+        int i = posFinal + 1;
+        int auxUno = num[9];
+        
+        //rota los últmos números
+        for(int x = 9; x >= posFinal; x--) {
+          if (x == posFinal) {
+            num[x] = num[posInicial];
+          } else {
+            num[x] = num[x-1];
           }
-          System.out.println();
-          //
-          
-          nuevo[posFinal] = num[posInicial];
-          nuevo[0] = num [9];
-          int i = posFinal;
-          
-          for (int x = (posFinal + 1); x < 10; x++) {
-            nuevo[x] = num[i];
-            i++;
-          } //rota los últimos a partir de la posicion final + 1
-          
-          i = 0;
-          
-          
-          for (int x = 1; x < (posFinal); x++) {
-            if (x == posInicial) {
-              nuevo[x] = num[posInicial - 1];
-              i = posInicial + 1;
-            } else {
-              nuevo[x] = num[i];
-              i++;
-            }
-          } //rota los primeros números
-          
-          //Muestra el array ordenado
-          System.out.print("El array final es: ");
-          for (int x = 0; x < 10; x++) {
-            System.out.print(nuevo[x] + " ");
-          }//
+        }//
+        
+        //los números entre posInicial y posFinal quedan igual
+        
+        //rota los primeros números
+        for(int x = posInicial; x > 0; x--) {
+          num[x] = num[x-1];
+        }//
+        
+        
+        num[0] = auxUno;
+        
+        //Muestra el array ordenado
+        System.out.print("El array final es: ");
+        for (int x = 0; x < 10; x++) {
+          System.out.print(num[x] + " ");
+        }//
       }
   }
 }

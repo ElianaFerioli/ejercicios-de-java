@@ -20,8 +20,7 @@ public class Ejercicio04 {
       cuadrado[x] = (int)(Math.pow(num[x],2));
       cubo[x] = (int)(Math.pow(num[x],3));
     }
-    System.out.print("Número\t\tCuadrado\tCubo");
-      System.out.println();
+    System.out.println("Número\t\tCuadrado\tCubo");
     
     for (int x = 0; x < 20; x++) {
       System.out.print(num[x] + "\t\t" + cuadrado[x] + "\t\t" + cubo[x]);
