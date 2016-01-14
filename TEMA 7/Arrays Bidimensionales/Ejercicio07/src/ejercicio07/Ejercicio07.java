@@ -145,7 +145,7 @@ public class Ejercicio07 {
         default:
       }
       if(esCerca) {
-        System.out.println("\nCuidado, hay una mina cerca!");
+        System.out.println("\nCuidado, hay una mina cerca!\n");
     }
     } while (!salir);
 
