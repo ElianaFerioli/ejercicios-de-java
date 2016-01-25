@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-ene-2016, 11:58:34
+    Author     : eliana
+*/
+body {
+    background-color:black;
+}
+div#img {
+    margin-left: 35%;
+}
+div#form {
+    margin-left: 33%;
+    background-color: grey;
+    width: 30%;
+    color: white;
+}
+
+div#jsp {
+    background-color: grey;
+    width: 50%;
+    color: white;
+    font-weight: bold; 
+    font-size: 28px;
+    text-align: center; 
+    margin: auto;
+    
+}
+
