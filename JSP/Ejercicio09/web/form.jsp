@@ -27,10 +27,10 @@
                     espacios--;
                     //Pinta caracteres
                     for(int x = 1; x <= caracteres; x++) {
-                        out.print("<img src=\"./img/ladrillo.jpg\">");
+                        out.print("<img src=\"./img/ladrillo.jpg\" width=\"20\">");
                     }
                     caracteres = caracteres + 2;
-                    out.println("<br>");
+                    out.print("<br>");
                 }
             %>
         </div>

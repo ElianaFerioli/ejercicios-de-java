@@ -15,9 +15,9 @@
     <body>
         <div>
             <%
-                String mes = request.getParameter("mes");
-                String dia = request.getParameter("dia");
-                String frase = request.getParameter("frase");
+                String mes = request.getParameter("mes").toLowerCase();
+                String dia = request.getParameter("dia").toLowerCase();
+                String frase = request.getParameter("frase").toLowerCase();
                 int ano = Integer.parseInt(request.getParameter("ano"));
                 int numDia = 0;
                 int contador = 1;
