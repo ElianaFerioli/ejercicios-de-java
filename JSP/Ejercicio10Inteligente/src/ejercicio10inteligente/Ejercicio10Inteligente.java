@@ -90,125 +90,251 @@ public class Ejercicio10Inteligente {
             
             //Calcula cuál debe ser su jugada
             boolean esAleatorio = true;
-            if((tablero[0][0] == 1)&&(tablero[0][1] == 1)&&(tablero[0][2] == 0)) {
+            //Ve si puede ganar 
+            if((tablero[0][0] == 2)&&(tablero[0][1] == 2)&&(tablero[0][2] == 0)) {
                 esAleatorio = false;
                 tablero[0][2] = 2;
                 tableroChar[0][2] = "@";
             }
-            if((tablero[0][0] == 1)&&(tablero[0][2] == 1)&&(tablero[0][1] == 0)) {
+            if((tablero[0][0] == 2)&&(tablero[0][2] == 2)&&(tablero[0][1] == 0)) {
                 esAleatorio = false;
                 tablero[0][1] = 2;
                 tableroChar[0][1] = "@";
             }
-            if((tablero[0][1] == 1)&&(tablero[0][2] == 1)&&(tablero[0][0] == 0)) {
+            if((tablero[0][1] == 2)&&(tablero[0][2] == 2)&&(tablero[0][0] == 0)) {
                 esAleatorio = false;
                 tablero[0][0] = 2;
                 tableroChar[0][0] = "@";
             }
-            if((tablero[1][0] == 1)&&(tablero[1][1] == 1)&&(tablero[1][2] == 0)) {
+            if((tablero[1][0] == 2)&&(tablero[1][1] == 2)&&(tablero[1][2] == 0)) {
                 esAleatorio = false;
                 tablero[1][2] = 2;
                 tableroChar[1][2] = "@";
             }
-            if((tablero[1][0] == 1)&&(tablero[1][2] == 1)&&(tablero[1][1] == 0)) {
+            if((tablero[1][0] == 2)&&(tablero[1][2] == 2)&&(tablero[1][1] == 0)) {
                 esAleatorio = false;
                 tablero[1][1] = 2;
                 tableroChar[1][1] = "@";
             }
-            if((tablero[1][1] == 1)&&(tablero[1][2] == 1)&&(tablero[1][0] == 0)) {
+            if((tablero[1][1] == 2)&&(tablero[1][2] == 2)&&(tablero[1][0] == 0)) {
                 esAleatorio = false;
                 tablero[1][0] = 2;
                 tableroChar[1][0] = "@";
             }
-            if((tablero[2][0] == 1)&&(tablero[2][1] == 1)&&(tablero[2][2] == 0)) {
+            if((tablero[2][0] == 2)&&(tablero[2][1] == 2)&&(tablero[2][2] == 0)) {
                 esAleatorio = false;
                 tablero[2][2] = 2;
                 tableroChar[2][2] = "@";
             }
-            if((tablero[2][0] == 1)&&(tablero[2][2] == 1)&&(tablero[2][1] == 0)) {
+            if((tablero[2][0] == 2)&&(tablero[2][2] == 2)&&(tablero[2][1] == 0)) {
                 esAleatorio = false;
                 tablero[2][1] = 2;
                 tableroChar[2][1] = "@";
             }
-            if((tablero[2][1] == 1)&&(tablero[2][2] == 1)&&(tablero[2][0] == 0)) {
+            if((tablero[2][1] == 2)&&(tablero[2][2] == 2)&&(tablero[2][0] == 0)) {
                 esAleatorio = false;
                 tablero[2][0] = 2;
                 tableroChar[2][0] = "@";
             }
-            if((tablero[0][0] == 1)&&(tablero[1][0] == 1)&&(tablero[2][0] == 0)) {
+            if((tablero[0][0] == 2)&&(tablero[1][0] == 2)&&(tablero[2][0] == 0)) {
                 esAleatorio = false;
                 tablero[2][0] = 2;
                 tableroChar[2][0] = "@";
             }
-            if((tablero[0][0] == 1)&&(tablero[2][0] == 1)&&(tablero[1][0] == 0)) {
+            if((tablero[0][0] == 2)&&(tablero[2][0] == 2)&&(tablero[1][0] == 0)) {
                 esAleatorio = false;
                 tablero[1][0] = 2;
                 tableroChar[1][0] = "@";
             }
-            if((tablero[1][0] == 1)&&(tablero[2][0] == 1)&&(tablero[0][0] == 0)) {
+            if((tablero[1][0] == 2)&&(tablero[2][0] == 2)&&(tablero[0][0] == 0)) {
                 esAleatorio = false;
                 tablero[0][0] = 2;
                 tableroChar[0][0] = "@";
             }
-            if((tablero[0][1] == 1)&&(tablero[1][1] == 1)&&(tablero[2][1] == 0)) {
+            if((tablero[0][1] == 2)&&(tablero[1][1] == 2)&&(tablero[2][1] == 0)) {
                 esAleatorio = false;
                 tablero[2][1] = 2;
                 tableroChar[2][1] = "@";
             }
-            if((tablero[0][1] == 1)&&(tablero[2][1] == 1)&&(tablero[1][1] == 0)) {
+            if((tablero[0][1] == 2)&&(tablero[2][1] == 2)&&(tablero[1][1] == 0)) {
                 esAleatorio = false;
                 tablero[1][1] = 2;
                 tableroChar[1][1] = "@";
             }
-            if((tablero[1][1] == 1)&&(tablero[2][1] == 1)&&(tablero[0][1] == 0)) {
+            if((tablero[1][1] == 2)&&(tablero[2][1] == 2)&&(tablero[0][1] == 0)) {
                 esAleatorio = false;
                 tablero[0][1] = 2;
                 tableroChar[0][1] = "@";
             }
-            if((tablero[0][2] == 1)&&(tablero[1][2] == 1)&&(tablero[2][2] == 0)) {
+            if((tablero[0][2] == 2)&&(tablero[1][2] == 2)&&(tablero[2][2] == 0)) {
                 esAleatorio = false;
                 tablero[2][2] = 2;
                 tableroChar[2][2] = "@";
             }
-            if((tablero[0][2] == 1)&&(tablero[2][2] == 1)&&(tablero[1][2] == 0)) {
+            if((tablero[0][2] == 2)&&(tablero[2][2] == 2)&&(tablero[1][2] == 0)) {
                 esAleatorio = false;
                 tablero[1][2] = 2;
                 tableroChar[1][2] = "@";
             }
-            if((tablero[1][2] == 1)&&(tablero[2][2] == 1)&&(tablero[0][2] == 0)) {
+            if((tablero[1][2] == 2)&&(tablero[2][2] == 2)&&(tablero[0][2] == 0)) {
                 esAleatorio = false;
                 tablero[0][2] = 2;
                 tableroChar[0][2] = "@";
             }
-            if((tablero[2][0] == 1)&&(tablero[1][1] == 1)&&(tablero[0][2] == 0)) {
+            if((tablero[2][0] == 2)&&(tablero[1][1] == 2)&&(tablero[0][2] == 0)) {
                 esAleatorio = false;
                 tablero[0][2] = 2;
                 tableroChar[0][2] = "@";
             }
-            if((tablero[2][0] == 1)&&(tablero[0][2] == 1)&&(tablero[1][1] == 0)) {
+            if((tablero[2][0] == 2)&&(tablero[0][2] == 2)&&(tablero[1][1] == 0)) {
                 esAleatorio = false;
                 tablero[1][1] = 2;
                 tableroChar[1][1] = "@";
             }
-            if((tablero[0][2] == 1)&&(tablero[1][1] == 1)&&(tablero[2][0] == 0)) {
+            if((tablero[0][2] == 2)&&(tablero[1][1] == 2)&&(tablero[2][0] == 0)) {
                 esAleatorio = false;
                 tablero[2][0] = 2;
                 tableroChar[2][0] = "@";
             }
-            if((tablero[0][0] == 1)&&(tablero[1][1] == 1)&&(tablero[2][2] == 0)) {
+            if((tablero[0][0] == 2)&&(tablero[1][1] == 2)&&(tablero[2][2] == 0)) {
                 esAleatorio = false;
                 tablero[2][2] = 2;
                 tableroChar[2][2] = "@";
             }
-            if((tablero[0][0] == 1)&&(tablero[2][2] == 1)&&(tablero[1][1] == 0)) {
+            if((tablero[0][0] == 2)&&(tablero[2][2] == 2)&&(tablero[1][1] == 0)) {
                 esAleatorio = false;
                 tablero[1][1] = 2;
                 tableroChar[1][1] = "@";
             }
-            if((tablero[1][1] == 1)&&(tablero[2][2] == 1)&&(tablero[0][0] == 0)) {
+            if((tablero[1][1] == 2)&&(tablero[2][2] == 2)&&(tablero[0][0] == 0)) {
                 esAleatorio = false;
                 tablero[0][0] = 2;
                 tableroChar[0][0] = "@";
+            }
+                
+            
+                
+            if(esAleatorio) { //Si no te puede ganar intenta que no ganes
+                if((tablero[0][0] == 1)&&(tablero[0][1] == 1)&&(tablero[0][2] == 0)) {
+                    esAleatorio = false;
+                    tablero[0][2] = 2;
+                    tableroChar[0][2] = "@";
+                }
+                if((tablero[0][0] == 1)&&(tablero[0][2] == 1)&&(tablero[0][1] == 0)) {
+                    esAleatorio = false;
+                    tablero[0][1] = 2;
+                    tableroChar[0][1] = "@";
+                }
+                if((tablero[0][1] == 1)&&(tablero[0][2] == 1)&&(tablero[0][0] == 0)) {
+                    esAleatorio = false;
+                    tablero[0][0] = 2;
+                    tableroChar[0][0] = "@";
+                }
+                if((tablero[1][0] == 1)&&(tablero[1][1] == 1)&&(tablero[1][2] == 0)) {
+                    esAleatorio = false;
+                    tablero[1][2] = 2;
+                    tableroChar[1][2] = "@";
+                }
+                if((tablero[1][0] == 1)&&(tablero[1][2] == 1)&&(tablero[1][1] == 0)) {
+                    esAleatorio = false;
+                    tablero[1][1] = 2;
+                    tableroChar[1][1] = "@";
+                }
+                if((tablero[1][1] == 1)&&(tablero[1][2] == 1)&&(tablero[1][0] == 0)) {
+                    esAleatorio = false;
+                    tablero[1][0] = 2;
+                    tableroChar[1][0] = "@";
+                }
+                if((tablero[2][0] == 1)&&(tablero[2][1] == 1)&&(tablero[2][2] == 0)) {
+                    esAleatorio = false;
+                    tablero[2][2] = 2;
+                    tableroChar[2][2] = "@";
+                }
+                if((tablero[2][0] == 1)&&(tablero[2][2] == 1)&&(tablero[2][1] == 0)) {
+                    esAleatorio = false;
+                    tablero[2][1] = 2;
+                    tableroChar[2][1] = "@";
+                }
+                if((tablero[2][1] == 1)&&(tablero[2][2] == 1)&&(tablero[2][0] == 0)) {
+                    esAleatorio = false;
+                    tablero[2][0] = 2;
+                    tableroChar[2][0] = "@";
+                }
+                if((tablero[0][0] == 1)&&(tablero[1][0] == 1)&&(tablero[2][0] == 0)) {
+                    esAleatorio = false;
+                    tablero[2][0] = 2;
+                    tableroChar[2][0] = "@";
+                }
+                if((tablero[0][0] == 1)&&(tablero[2][0] == 1)&&(tablero[1][0] == 0)) {
+                    esAleatorio = false;
+                    tablero[1][0] = 2;
+                    tableroChar[1][0] = "@";
+                }
+                if((tablero[1][0] == 1)&&(tablero[2][0] == 1)&&(tablero[0][0] == 0)) {
+                    esAleatorio = false;
+                    tablero[0][0] = 2;
+                    tableroChar[0][0] = "@";
+                }
+                if((tablero[0][1] == 1)&&(tablero[1][1] == 1)&&(tablero[2][1] == 0)) {
+                    esAleatorio = false;
+                    tablero[2][1] = 2;
+                    tableroChar[2][1] = "@";
+                }
+                if((tablero[0][1] == 1)&&(tablero[2][1] == 1)&&(tablero[1][1] == 0)) {
+                    esAleatorio = false;
+                    tablero[1][1] = 2;
+                    tableroChar[1][1] = "@";
+                }
+                if((tablero[1][1] == 1)&&(tablero[2][1] == 1)&&(tablero[0][1] == 0)) {
+                    esAleatorio = false;
+                    tablero[0][1] = 2;
+                    tableroChar[0][1] = "@";
+                }
+                if((tablero[0][2] == 1)&&(tablero[1][2] == 1)&&(tablero[2][2] == 0)) {
+                    esAleatorio = false;
+                    tablero[2][2] = 2;
+                    tableroChar[2][2] = "@";
+                }
+                if((tablero[0][2] == 1)&&(tablero[2][2] == 1)&&(tablero[1][2] == 0)) {
+                    esAleatorio = false;
+                    tablero[1][2] = 2;
+                    tableroChar[1][2] = "@";
+                }
+                if((tablero[1][2] == 1)&&(tablero[2][2] == 1)&&(tablero[0][2] == 0)) {
+                    esAleatorio = false;
+                    tablero[0][2] = 2;
+                    tableroChar[0][2] = "@";
+                }
+                if((tablero[2][0] == 1)&&(tablero[1][1] == 1)&&(tablero[0][2] == 0)) {
+                    esAleatorio = false;
+                    tablero[0][2] = 2;
+                    tableroChar[0][2] = "@";
+                }
+                if((tablero[2][0] == 1)&&(tablero[0][2] == 1)&&(tablero[1][1] == 0)) {
+                    esAleatorio = false;
+                    tablero[1][1] = 2;
+                    tableroChar[1][1] = "@";
+                }
+                if((tablero[0][2] == 1)&&(tablero[1][1] == 1)&&(tablero[2][0] == 0)) {
+                    esAleatorio = false;
+                    tablero[2][0] = 2;
+                    tableroChar[2][0] = "@";
+                }
+                if((tablero[0][0] == 1)&&(tablero[1][1] == 1)&&(tablero[2][2] == 0)) {
+                    esAleatorio = false;
+                    tablero[2][2] = 2;
+                    tableroChar[2][2] = "@";
+                }
+                if((tablero[0][0] == 1)&&(tablero[2][2] == 1)&&(tablero[1][1] == 0)) {
+                    esAleatorio = false;
+                    tablero[1][1] = 2;
+                    tableroChar[1][1] = "@";
+                }
+                if((tablero[1][1] == 1)&&(tablero[2][2] == 1)&&(tablero[0][0] == 0)) {
+                    esAleatorio = false;
+                    tablero[0][0] = 2;
+                    tableroChar[0][0] = "@";
+                }
             }
             
             
