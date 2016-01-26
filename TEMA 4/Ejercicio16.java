@@ -21,7 +21,7 @@ public class Ejercicio16 {
     System.out.print("Ha perdido el interés que mostraba anteriormente por ti: ");
     String P3 = System.console().readLine();
     if (P3.equals("V")) {
-      nota = nota + 1;
+      nota = nota + 3;
     }
     System.out.print("Ahora se afeita y se asea con más frecuencia (si es hombre) o ahora se arregla el pelo y se asea con más frecuencia (si es mujer): ");
     String P4 = System.console().readLine();

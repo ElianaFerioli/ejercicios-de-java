@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25-ene-2016, 18:27:18
+    Author     : eliana
+*/
+
+body {
+    background-color: black;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+input#boton{
+    margin-left: 45%;
+}
+div#index{
+    color: white;
+}
+div#puntuacion {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
