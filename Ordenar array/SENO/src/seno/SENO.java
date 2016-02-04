@@ -1,9 +1,9 @@
 /*
- * Escribe un programa que construya un array con m filas y n columnas cuyos valores son los números
-1, 2, 3, 4, ... , m x n acomodados en diagonal en sentido noreste → suroeste. Los valores de m y n
-que introduzca el usuario deberán ser mayores o iguales a 2.
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package ejercicio01;
+package seno;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author eliana
  */
-public class Ejercicio01 {
+public class SENO {
 
     /**
      * @param args the command line arguments
@@ -25,7 +25,7 @@ public class Ejercicio01 {
         int columna = Integer.parseInt(s.nextLine());
         //Inicializa el array
         int[][] num = new int[fila][columna];
-        int numero = 1;
+        int numero = fila * columna;
         int iteraciones = (fila + columna) - 1;
         int cambioColumna = 0;
         int cambioFila = 0;
@@ -37,7 +37,7 @@ public class Ejercicio01 {
                 num[f][c] = numero;
                 c--;
                 f++;
-                numero++;
+                numero--;
             }
             if (iteraciones > fila) {
                 cambioColumna++;
