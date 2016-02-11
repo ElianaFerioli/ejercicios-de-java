@@ -25,29 +25,24 @@ public class Varias {
     int pos = p;
     int num = x;
     int contador = 0;
+    int digito = 0;
     
     //Cuenta cuántas veces sepuede dividir hasta llegar a cero
-    while(num > 0) {
-        num = num/10;
-        contador++;
-    }
+    contador = Varias.cuentaDigitos(num);
     //Crea el divisor
-    int divisor = 1;
-    while(contador > 1){
-        divisor = divisor * 10;
-        contador--;
-    }
-    contador = -1;
-    //Busca la pos
-    while(contador != pos) {
-        num = x / divisor;
-        x = x % divisor;
+    int divisor = Varias.potencia(10, (contador - 1));
+    
+    //Busca el dígito
+    contador = 0;
+    while(contador <= pos) {
+        digito = num / divisor;
+        num = num % divisor;
         divisor = divisor / 10;
         contador++;
     }
     
     //El numero digito es num
-    return num;
+    return digito;
     }
     
     /**
@@ -202,12 +197,14 @@ public class Varias {
     
     //Vuelta/////////////////////////////////////////////////////
      public static int vuelta (int numero) {
-         int volteado = 0;
-    
+         int volteado = 0; 
+         
         while (numero > 0) {
           volteado = (volteado * 10) + (numero % 10);
           numero /= 10;
         }
+        
+        
         return volteado;
      }
      
@@ -378,30 +375,9 @@ public class Varias {
     //Selecciona un trozo de un número/////////////////////////////////////////
     public static long trozoDeNumero(int num, int ini, int fin) {
         fin = Varias.cuentaDigitos(num) - fin;
-        //Quita los de delante
-        int divisor = 1;
-        int contador = Varias.cuentaDigitos(num);
-        //Crea el divisor
-        while(contador > 1){
-            divisor = divisor * 10;
-            contador--;
-        }
-        //Crea un nuevo número quitandole lo que el usuario pide
-        while(ini > 1){
-            num = num % divisor;
-            divisor = divisor / 10;
-            ini--;
-        }
-        //Quita por detras
-        //Crea el divisor
-        divisor = 1;
+        num = Varias.quitaPorDelante(num, (ini - 1));
         
-        while(fin > 0){
-            divisor = divisor * 10;
-            fin--;
-        }
-        //Crea un nuevo número quitandole lo que el usuario pide
-        num = num / divisor;
+        num = Varias.quitaPorDetras(num, fin);
         
         
         return num;
@@ -428,6 +404,81 @@ public class Varias {
          
          return numUno;
      }
+     
+    /**
+    * Pasa de decimal a binario.
+    *
+    * @param num un número entero positivo
+    */
+    //Pasa de decimal a binario/////////////////////////////////////////
+    public static void decimalAbinario(int num) {
+        int resultado = num;
+        int resto = 0;
+        int binario = 0;
+        int contador = 0;
+        
+        //Averigua la longitud del array
+        if (num > 8) {
+            while (num > 0){
+                num = num /2;
+                contador++;
+            }
+        } else {
+            contador = 5;
+        }
+        
+        //Inicializa el array
+        int[] array = new int [contador];
+        int x = 0;
+        
+        num = resultado;
+        while(resultado > 0) {
+            resultado = num / 2;
+            resto = num % 2;
+            array[x] = resto;
+            x++;
+            num = num/2;
+            
+        }
+        
+        
+        //Da vuelta el array
+        contador = contador - 1;
+        for(int i = 0; i < contador; i++) {
+            int aux = array[i];
+            array[i] = array[contador];
+            array[contador] = aux;
+            contador--;
+        }
+        
+        //Muestra el array
+        for(int n: array) {
+            System.out.print(n);
+        } 
+    }
+    
+    /**
+    * Pasa de binario a decimal.
+    *
+    * @param num un número entero positivo
+    * @return un entero de tipo int
+    */
+    //Pasa de binario a decimal/////////////////////////////////////////
+    public static int binarioAdecimal(int num) {
+        int contador = Varias.cuentaDigitos(num);
+        contador--;
+        int decimal = 0;
+        int i = 1;
+        
+        //Crea el decimal
+        for(int x = contador; x >= 0; x-- ){
+            decimal = Varias.digitoN(num, x) * i + decimal;
+            i = i * 2;
+        }
+        
+        return decimal;
+    }
+    
     
     
 }
