@@ -76,12 +76,12 @@ public class ColeccionDiscos {
     @Override
     public String toString() {
         return "ColeccionDiscos-----------------------" + 
-                "\nCódigo: " + codigo + 
-                "\nAutor: " + autor + 
-                "\nTítulo: " + titulo +                
-                "\nDiscográfica: " + discografica +
-                "\nAño: " + anio +
-                "\nDuración: " + duracion; 
+                "\nCódigo: " + this.codigo + 
+                "\nAutor: " + this.autor + 
+                "\nTítulo: " + this.titulo +                
+                "\nDiscográfica: " + this.discografica +
+                "\nAño: " + this.anio +
+                "\nDuración: " + this.duracion; 
                 
     }
     

@@ -155,15 +155,63 @@ public class Ejercicio03Prueba {
                     System.out.println("4. Modificar discográfica.");
                     System.out.println("5. Modificar año.");
                     System.out.println("6. Modificar duración.");
-                    System.out.println("7. Mostrar todos.");
                     System.out.print("¿Qué dato desea modificar?: ");
+                    int menuUp = Integer.parseInt(s.nextLine());
                     
                     //Switch del Update
+                    int indice = Funciones.buscaObjeto(codUpd, coleccionUno);
                     
-                                
+                    switch(menuUp) {
+                        case 1:
+                            System.out.print("Introduzca el nuevo código: ");
+                            String nuevoCod = s.nextLine();
+                            coleccionUno[indice].setCodigo(nuevoCod);
+                        break;
+                        case 2:
+                            System.out.print("Introduzca el nuevo autor: ");
+                            String nuevoAut = s.nextLine();
+                            coleccionUno[indice].setAutor(nuevoAut);
+                        break;
+                        case 3:
+                            System.out.print("Introduzca el nuevo título: ");
+                            String nuevoTit = s.nextLine();
+                            coleccionUno[indice].setTitulo(nuevoTit);
+                        break;
+                        case 4:
+                            System.out.print("Introduzca la nueva discográfica: ");
+                            String nuevaDisc = s.nextLine();
+                            coleccionUno[indice].setDiscografica(nuevaDisc);
+                        break;
+                        case 5:
+                            System.out.print("Introduzca el nuevo año: ");
+                            int nuevoAnio = Integer.parseInt(s.nextLine());
+                            coleccionUno[indice].setAnio(nuevoAnio);
+                        break;
+                        case 6:
+                            System.out.print("Introduzca la nueva duración: ");
+                            int nuevaDur = Integer.parseInt(s.nextLine());
+                            coleccionUno[indice].setDuracion(nuevaDur);
+                        break;
+                        default:
+                            System.out.println("Opción incorrecta.");
+                        break;                            
+                    }
+                break;
+                case 4:
+                    //Menú del delete
+                    System.out.println("Borrar disco");
+                    System.out.println("-------------");
+                    System.out.print("Introduzca el código del disco que quiere borrar: ");
+                    String codDel = s.nextLine();
+                    
+                    //Borra el disco
+                    int indiceDelete = Funciones.buscaObjeto(codDel, coleccionUno);
+                    coleccionUno[indiceDelete] = new ColeccionDiscos();
+                break;
+                default:
+                    System.out.println("Opción incorrecta.");
+                break;           
             }
-        }
-        
-        
+        }   
     }    
 }
