@@ -14,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author eliana
  */
-public class Ejercicio02Prueba {
+public class Ejercicio07Prueba {
     public static void main(String[] args) {
         System.out.println("EUROCOIN");
         ArrayList<Moneda> monedasLanzadas = new ArrayList<Moneda>();
