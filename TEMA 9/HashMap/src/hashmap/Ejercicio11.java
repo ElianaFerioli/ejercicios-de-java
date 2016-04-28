@@ -25,8 +25,8 @@ public class Ejercicio11 {
         //Crea el diccionario
         HashMap<String, String> diccionario = creaDiccionario();        
         //Agrega todas las claves a un ArrayList
-        for(Map.Entry pareja: diccionario.entrySet()) {
-            claves.add((String)pareja.getKey());
+        for (Map.Entry pareja : diccionario.entrySet()) {
+            claves.add((String) pareja.getKey());
         }
         //Muestra aleatoriamente las palabras y pide traducción
         System.out.println("Por favor, traduzca las siguientes palabras: ");
