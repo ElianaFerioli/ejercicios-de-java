@@ -27,7 +27,7 @@ public class Ejercicio01 {
         nombres.add("José Antonio Arroyo");
         nombres.add("José Navarro Ortiz");
         nombres.add("Eliana Ferioli");
-        nombres.add("Constantine Brandius");
+        nombres.add("Constantine Brandus");
         nombres.add("Pablo Giron");
         
         //Muestra el contenido del array
