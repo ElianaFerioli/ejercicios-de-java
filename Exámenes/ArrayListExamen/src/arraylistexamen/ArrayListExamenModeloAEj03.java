@@ -27,7 +27,7 @@ public class ArrayListExamenModeloAEj03 {
         HashMap<String, String> diccionario = new HashMap<>();
         Scanner s = new Scanner(System.in);
         String x = "s";
-        //Carga el diccionario con 20 palabras
+        //Carga el diccionario con palabras
         diccionario.put("caliente", "caliente");
         diccionario.put("candente", "caliente");
         diccionario.put("ardiente", "caliente");

@@ -23,14 +23,14 @@ public class ArrayListExamenModeloAEj01 {
             original.add(i);
         }
         
-        //Manda los que son capicúa a otro array
+        //Manda los que son primos a otro array
         for(int o: original) {
             if(esPrimo(o)) {
                 primo.add(o);                
             }
         }
         
-        //Manda los que no son capicua a otro array
+        //Manda los que no son primos a otro array
         for(int o: original) {
             if(!esPrimo(o)) {
                 noPrimo.add(o);                
@@ -43,16 +43,16 @@ public class ArrayListExamenModeloAEj01 {
             System.out.print(o + "/");
         }
         
-        //Muestra lista capicua
+        //Muestra lista de primos
         System.out.println("\nMuestra la lista de primos: ");
         for(int c: primo) {
             System.out.print(c + "/");
         }
         
-        //Muestra lista no capicua
+        //Muestra lista no primos
         System.out.println("\nMuestra la lista de no primos: ");
-        for(int nc: noPrimo) {
-            System.out.print(nc + "/");
+        for(int np: noPrimo) {
+            System.out.print(np + "/");
         }
     }
         
