@@ -1,0 +1,391 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-may-2016, 11:54:19
+    Author     : eliana
+*/
+/*@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+*{
+	font-family: 'Special Elite', cursive;
+}*/
+*{
+    color: white;
+}
+@font-face {
+                font-family: "STJEDISE";
+                src: url("./STJEDISE.TTF");
+            }
+body {
+        font-family: "STJEDISE";
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 0;
+	background-image: url("../imagenes/fondomain.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 5% 80%;
+        overflow: hidden;
+}
+#halcon {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 73%;
+    left: -70px;
+}
+#ejer{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 90%;
+    top: 2%
+}
+/*Estilos del header*/
+
+header h1, header h3{
+    color: #ffe207;
+    margin: 0;
+}
+h3#altaexitosa{
+    color: #ffe207;
+    margin-bottom: 2%;
+}
+h3#listado{
+    color: #ffe207;
+    margin-bottom: 2%;
+}
+/*Estilos del main*/
+form {
+    margin: 0;
+    padding: 0;
+}
+main form input[name="ok"] {
+    border: 1px solid grey;
+    width: 45%;
+    height: 90px;
+    margin-top: 3%;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+}
+    main form input:hover{
+        box-shadow: 2px 2px 1px grey;
+    }
+    main form input:active{
+        box-shadow: none;
+    }
+#rebeldes{
+    background-color: #800000;
+    opacity: 0.7;
+}
+#imperio{
+    background-color: grey;
+    opacity: 0.7;
+}
+#clones{
+    background-color: #664400;
+    opacity: 0.7;
+}
+#jedi{
+    background-color: #004d00;
+    opacity: 0.7;
+}
+input{
+    font-family: "STJEDISE";
+}
+form#controlacceso{
+    position: absolute;
+    top: 18%;
+    left: 62%;
+    text-align: center;
+}
+input#pass{
+    color: #ffe207;
+    width: 300px;
+    height: 35px;
+    background-color: black;
+    border-radius: 15px;
+    margin-bottom: 1%;
+}
+input#verficha{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    background-color: #ffe207;
+    border: 0;
+    cursor: pointer;
+}
+h1{
+    color: #ffe207;
+    margin: 0;
+}
+/*Estilos de "ejercito"*/
+#ejercito h1, #ejercito h3{
+    color: #ffe207;
+}
+#ejercito h3{
+    margin-bottom: 2%;
+}
+
+#ejercito form input{
+    border: 2px solid #ffe207;
+    opacity: 0.7;
+    background-color: transparent;
+    border-radius: 25px;
+    margin-bottom: 3%;
+    width: 40%;
+    padding: 10px;
+    font-size: 18px;
+}
+#ejercito form input:hover {
+    color: black;
+    background-color: #ffe207;
+    cursor: pointer;
+    border-color:white;
+}
+
+/*Estilo del aside*/
+aside{
+    background-color: #ffe207;
+    opacity: 0.7;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 20%;
+    left: 52%;
+    border-radius: 50px;
+    border: 2px solid white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+aside h3, aside input, aside select option, aside select{
+    margin: 0;
+    margin-left: 10%;
+    color: black;
+}
+aside input[type="text"]{
+    height: 20px;
+}
+aside input[type="submit"]{
+    margin-top: 4%;
+    margin-left: 35%;
+}
+aside#alta{
+    padding-bottom: 0;
+    height: 34%;
+    width: 35%;
+}
+aside#alta input {
+    margin-bottom: 1%;
+}
+aside#baja{
+    text-align: center;
+    padding: 2%;
+    width: 30%;
+    height: 200px;
+}
+aside#baja form h3 {
+    margin-left: 1%;
+    margin-top: 2%;
+}
+aside#baja form select{
+    margin-left: 1%;
+    margin-top: 3%;
+}
+aside#baja form input{
+    margin-left: 1%;
+    margin-top: 5%;
+}
+/****/
+aside#modifica{
+    text-align: center;
+    padding: 2%;
+    width: 30%;
+    height: 200px;
+}
+aside#modifica form h3 {
+    color: black;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+aside#modifica form select{
+    margin-left: 1%;
+    margin-top: 3%;
+}
+aside#modifica form input{
+    margin-left: 1%;
+    margin-top: 5%;
+}
+
+div#listado{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    position: absolute;
+    top: 23%;
+    left: 46%;
+    width: 50%;
+    height: 60%;
+    padding-right: 0.5%;
+    border-radius: 25px;
+}
+table {
+    width: 100%;
+    margin: 0;
+    background-color: #ffe207;
+    opacity: 0.7;
+    border: 0;
+    border-radius: 25px;
+    padding: 1%;
+    border-collapse: collapse;
+}
+tr#cabecera{
+    background-color: black;
+    padding: 0;
+    margin: 0;    
+}
+td {
+    padding: 0;
+    margin: 0;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+}
+th {
+    text-align: center;
+    padding: 3px;
+    margin: 0;
+    background-color: black;
+    color: #ffe207;
+    font-size: 14px;
+    border-left: 0.5px solid #ffe207;
+    
+}
+
+div#ficha{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    position: absolute;
+    top: 22%;
+    left: 55%;
+    width: 25%;
+    height: 65%;
+    border-radius: 25px;
+    border: 1px solid #ffe207;
+}
+div#ficha table {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #ffe207;
+    opacity: 0.7;
+    border: 0;
+    border-radius: 25px;
+    border-collapse: collapse;
+}
+div#ficha table tr td {
+    padding: 0;
+    margin: 0;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+}
+div#ficha table tr th {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: #ffe207;
+    font-size: 13px;    
+}
+
+div#modificacion{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    width: 25%;
+    height: 67%;
+    border-radius: 25px;
+    border: 1px solid #ffe207;
+}
+div#modificacion table {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #ffe207;
+    opacity: 0.7;
+    border: 0;
+    border-radius: 25px;
+    border-collapse: collapse;
+}
+div#modificacion table tr td {
+    padding: 0;
+    margin: 0;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+}
+div#modificacion table tr td input{
+    width: 80%;
+    height: 80%;
+    color: black;
+    text-align: center;
+}
+div#modificacion table tr td input[type="submit"]{
+    width: 100%;
+    height: 80%;
+    color: black;
+    text-align: center;
+    border: 1px solid #ffe207;
+    background-color: #ffe207;
+    cursor: pointer;
+}
+div#modificacion table tr td input[type="submit"]:hover{
+    background-color: black;
+    color: #ffe207;
+}
+
+div#modificacion table tr th {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: #ffe207;
+    font-size: 13px;    
+}
+div#modificacion table tr td select {
+    color: black;
+    width: 87%;
+}
+div#modificacion table tr td select option {
+    color: black;
+}
+/*Estilos del footer*/
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-left: -80px;
+    background-color: black;
+    opacity: 0.7;
+    border-top: 1px solid #ffe207;
+}
+footer h6{
+    margin-top: 0.5%;
+    margin-left: 8%;
+    color: white;
+}
+
