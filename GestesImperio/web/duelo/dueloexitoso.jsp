@@ -1,6 +1,6 @@
 <%-- 
-    Document   : verficha
-    Created on : 19-may-2016, 9:37:20
+    Document   : dueloexitoso
+    Created on : 23-may-2016, 12:36:37
     Author     : eliana
 --%>
 <%@page import="java.sql.Statement"%>
@@ -43,7 +43,7 @@
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <input type="submit" name="ok" value="Borrar un soldado" id="borra">
             </form>
-            <form action="modifica.jsp" method="post">
+            <form action="../modifica/modifica.jsp" method="post">
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <input type="submit" name="ok" value="Modificar" id="modifica">
             </form>
@@ -51,40 +51,56 @@
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <input type="submit" name="ok" value="ver listado" id="lista">
             </form>
-            <form action="../duelo/duelo.jsp" method="post">
+            <form action="duelo.jsp" method="post">
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <input type="submit" name="ok" value="Duelo" id="duelo">
             </form>
         </div>
-            <aside id="modifica">
-            <form action="modificasold.jsp" method="post">
-                <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
-                <h3>¿qué soldado quieres modificar?</h3>
-                <select name="nomsold">
-                <option selected disabled required>--- Elige el soldado ---</option>
+            <aside id="dueloexitoso">
                 <%
-                    out.print(nomejer);
+                    String codsoldado = request.getParameter("codsoldado");
+                    String contrario = request.getParameter("contrario");
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestesImperio", "root", "root");
                     Statement s = conexion.createStatement();
-                    ResultSet listado = s.executeQuery ("SELECT NOMSOLD FROM SOLDADOS WHERE NOMEJER=\"" + nomejer + "\"");
-                    while (listado.next()) {
-                        String nomsold = listado.getString("NOMSOLD");
-                        out.print(nomsold);
-                        out.print("<option value=\"" + nomsold +"\">");
-                        out.print(nomsold);
-                        out.print("</option>");
-                    }
+                    ResultSet listado = s.executeQuery ("SELECT NOMSOLD, NOMEJER, EXPERSOLD FROM SOLDADOS WHERE CODSOLDADO=\"" + contrario + "\"");
+                    String nomsoldcontrario = listado.getString("NOMSOLD");
+                    String nomejercontrario = listado.getString("NOMEJER");
+                    int expersoldcontrario = Integer.parseInt(listado.getString("EXPERSOLD"));
+                    listado = s.executeQuery ("SELECT NOMSOLD, NOMEJER, EXPERSOLD FROM SOLDADOS WHERE CODSOLDADO=\"" + codsoldado + "\"");
+                    String nomsoldmio = listado.getString("NOMSOLD");
+                    String nomejermio = listado.getString("NOMEJER");
+                    int expersoldmio = Integer.parseInt(listado.getString("EXPERSOLD"));
+                    
+                    out.println("<table>");
+                        out.println("<tr>");
+                            out.println("<th>");
+                            out.print("daño");
+                            out.println("</th>");
+                            out.println("<th>");
+                            out.print("asalto");
+                            out.println("</th>");
+                            out.println("<th>");
+                            out.print("daño");
+                            out.println("</th>");
+                        out.println("</tr>");
+                        out.println("<tr>");
+                            out.println("<td>");
+                            out.print("daño");
+                            out.println("</td>");
+                            out.println("<td>");
+                            out.print("asalto");
+                            out.println("</td>");
+                            out.println("<td>");
+                            out.print("daño");
+                            out.println("</td>");
+                        out.println("</tr>");
+                    out.println("</table>");  
                     conexion.close();
                 %>
-                </select>
-                <br>
-                <input type="submit" name="ok" value="modificar soldado">
-            </form>
         </aside>
             <footer>
             <h6>E.F Megasupercorporation</h6>
             </footer>
             <img src="../imagenes/halcon.png" width="250px" id="halcon">
     </body>
-</html>

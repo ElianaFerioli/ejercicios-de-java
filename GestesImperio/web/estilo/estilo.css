@@ -240,7 +240,27 @@ aside#modifica form input{
     margin-left: 1%;
     margin-top: 5%;
 }
-
+/****/
+aside#duelo{
+    text-align: center;
+    padding: 2%;
+    width: 30%;
+    height: 250px;
+}
+aside#duelo form h3 {
+    color: black;
+    margin-left: 1%;
+    margin-top: 2%;
+}
+aside#duelo form select{
+    margin-left: 1%;
+    margin-top: 3%;
+}
+aside#duelo form input{
+    margin-left: 1%;
+    margin-top: 7%;
+}
+/***/
 div#listado{
     margin: 0;
     padding: 0;

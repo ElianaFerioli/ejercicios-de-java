@@ -1,6 +1,6 @@
 <%-- 
-    Document   : verficha
-    Created on : 19-may-2016, 9:37:20
+    Document   : duelo
+    Created on : 23-may-2016, 12:09:45
     Author     : eliana
 --%>
 <%@page import="java.sql.Statement"%>
@@ -10,7 +10,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet"  href="../estilo/estilo.css" title="style"/>
         <title>JSP Page</title>
@@ -43,7 +43,7 @@
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <input type="submit" name="ok" value="Borrar un soldado" id="borra">
             </form>
-            <form action="modifica.jsp" method="post">
+            <form action="../modifica/modifica.jsp" method="post">
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <input type="submit" name="ok" value="Modificar" id="modifica">
             </form>
@@ -51,27 +51,58 @@
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <input type="submit" name="ok" value="ver listado" id="lista">
             </form>
-            <form action="../duelo/duelo.jsp" method="post">
+            <form action="duelo.jsp" method="post">
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <input type="submit" name="ok" value="Duelo" id="duelo">
             </form>
         </div>
-            <aside id="modifica">
-            <form action="modificasold.jsp" method="post">
+            <aside id="duelo">
+            <form action="dueloexitoso.jsp" method="post">
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
-                <h3>¿qué soldado quieres modificar?</h3>
+                <h3>¿qué soldado va a luchar?</h3>
                 <select name="nomsold">
                 <option selected disabled required>--- Elige el soldado ---</option>
                 <%
-                    out.print(nomejer);
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestesImperio", "root", "root");
                     Statement s = conexion.createStatement();
-                    ResultSet listado = s.executeQuery ("SELECT NOMSOLD FROM SOLDADOS WHERE NOMEJER=\"" + nomejer + "\"");
+                    ResultSet listado = s.executeQuery ("SELECT NOMSOLD, CODSOLDADO FROM SOLDADOS WHERE NOMEJER=\"" + nomejer + "\"");
                     while (listado.next()) {
                         String nomsold = listado.getString("NOMSOLD");
+                        String codsoldado = listado.getString("CODSOLDADO");
+                        out.print("<option value=\"" + codsoldado +"\">");
                         out.print(nomsold);
-                        out.print("<option value=\"" + nomsold +"\">");
+                        out.print("</option>");
+                    }
+                %>
+                </select>
+                <h3>¿contra quien?</h3>
+                <select name="contrario">
+                <option selected disabled required>--- Elige el soldado ---</option>
+                <%
+                    String contrariosUno = "";
+                    String contrariosDos = "";
+                    if((nomejer.equals("REBELDES"))||(nomejer.equals("JEDIS"))){
+                        contrariosUno = "IMPERIO";
+                        contrariosDos = "CLONES";
+                    }
+                    if((nomejer.equals("IMPERIO"))||(nomejer.equals("CLONES"))){
+                        contrariosUno = "REBELDES";
+                        contrariosDos = "JEDIS";
+                    }
+                    listado = s.executeQuery ("SELECT NOMSOLD, CODSOLDADO FROM SOLDADOS WHERE NOMEJER=\"" + contrariosUno + "\"");
+                    while (listado.next()) {
+                        String nomsold = listado.getString("NOMSOLD");
+                        String codsoldado = listado.getString("CODSOLDADO");
+                        out.print("<option value=\"" + codsoldado +"\">");
+                        out.print(nomsold);
+                        out.print("</option>");
+                    }
+                    listado = s.executeQuery ("SELECT NOMSOLD, CODSOLDADO FROM SOLDADOS WHERE NOMEJER=\"" + contrariosDos + "\"");
+                    while (listado.next()) {
+                        String nomsold = listado.getString("NOMSOLD");
+                        String codsoldado = listado.getString("CODSOLDADO");
+                        out.print("<option value=\"" + codsoldado +"\">");
                         out.print(nomsold);
                         out.print("</option>");
                     }
@@ -79,7 +110,7 @@
                 %>
                 </select>
                 <br>
-                <input type="submit" name="ok" value="modificar soldado">
+                <input type="submit" name="ok" value="que comience el duelo">
             </form>
         </aside>
             <footer>
@@ -87,4 +118,5 @@
             </footer>
             <img src="../imagenes/halcon.png" width="250px" id="halcon">
     </body>
+</html>
 </html>
