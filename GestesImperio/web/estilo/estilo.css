@@ -74,27 +74,45 @@ main form input[name="ok"] {
     text-align: center;
     font-size: 30px;
 }
-    main form input:hover{
-        box-shadow: 2px 2px 1px grey;
-    }
-    main form input:active{
-        box-shadow: none;
-    }
 #rebeldes{
-    background-color: #800000;
-    opacity: 0.7;
+    background-color: transparent;
+    border: 1px solid #ffe207;
+    color: #660000;
+}
+#rebeldes:hover{
+    background-color: #ffe207;
+    color: black;
+    border: 3px solid grey;
 }
 #imperio{
-    background-color: grey;
-    opacity: 0.7;
+    background-color: transparent;
+    border: 1px solid #ffe207;
+    color: grey;
+}
+#imperio:hover{
+    background-color: #ffe207;
+    color: black;
+    border: 3px solid grey;
 }
 #clones{
-    background-color: #664400;
-    opacity: 0.7;
+    background-color: transparent;
+    border: 1px solid #ffe207;
+    color: #000066;
+}
+#clones:hover{
+    background-color: #ffe207;
+    color: black;
+    border: 3px solid grey;
 }
 #jedi{
-    background-color: #004d00;
-    opacity: 0.7;
+    background-color: transparent;
+    border: 1px solid #ffe207;
+    color: #003300;
+}
+#jedi:hover{
+    background-color: #ffe207;
+    color: black;
+    border: 3px solid grey;
 }
 input{
     font-family: "STJEDISE";
