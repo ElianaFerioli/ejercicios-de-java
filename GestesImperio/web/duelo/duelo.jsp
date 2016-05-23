@@ -60,7 +60,7 @@
             <form action="dueloexitoso.jsp" method="post">
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <h3>¿qué soldado va a luchar?</h3>
-                <select name="nomsold">
+                <select name="codsoldado">
                 <option selected disabled required>--- Elige el soldado ---</option>
                 <%
                     Class.forName("com.mysql.jdbc.Driver");

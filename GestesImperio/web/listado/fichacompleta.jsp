@@ -147,6 +147,14 @@
                             <td>
                         <%
                             out.print(listado.getString("CONOCIMIENTO"));
+                        %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>monedas</th>
+                            <td>
+                        <%
+                            out.print(listado.getString("MONEDAS"));
                             conexion.close();
                         %>
                             </td>

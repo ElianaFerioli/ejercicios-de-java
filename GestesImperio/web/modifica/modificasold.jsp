@@ -168,6 +168,12 @@
                             </td>
                         </tr>
                         <tr>
+                            <th>monedas</th>
+                            <td>
+                                <input type="number" name="MONEDAS" value="<% out.print(listado.getString("MONEDAS").toLowerCase()); %>"/>
+                            </td>
+                        </tr>
+                        <tr>
                             <td colspan="2">
                                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>"/>
                                 <input type="hidden" name="codsoldado" value="<% out.print(listado.getString("CODSOLDADO")); %>"/>

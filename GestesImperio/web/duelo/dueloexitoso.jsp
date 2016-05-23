@@ -55,49 +55,93 @@
                 <input type="hidden" name="nomejer" value="<% out.print(nomejer); %>">
                 <input type="submit" name="ok" value="Duelo" id="duelo">
             </form>
-        </div>
             <aside id="dueloexitoso">
                 <%
-                    String codsoldado = request.getParameter("codsoldado");
-                    String contrario = request.getParameter("contrario");
+                    int codsoldado = Integer.parseInt(request.getParameter("codsoldado"));
+                    int contrario = Integer.parseInt(request.getParameter("contrario"));
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestesImperio", "root", "root");
                     Statement s = conexion.createStatement();
                     ResultSet listado = s.executeQuery ("SELECT NOMSOLD, NOMEJER, EXPERSOLD FROM SOLDADOS WHERE CODSOLDADO=\"" + contrario + "\"");
+                    listado.next();
                     String nomsoldcontrario = listado.getString("NOMSOLD");
                     String nomejercontrario = listado.getString("NOMEJER");
                     int expersoldcontrario = Integer.parseInt(listado.getString("EXPERSOLD"));
                     listado = s.executeQuery ("SELECT NOMSOLD, NOMEJER, EXPERSOLD FROM SOLDADOS WHERE CODSOLDADO=\"" + codsoldado + "\"");
+                    listado.next();
                     String nomsoldmio = listado.getString("NOMSOLD");
                     String nomejermio = listado.getString("NOMEJER");
                     int expersoldmio = Integer.parseInt(listado.getString("EXPERSOLD"));
+                    //Elige el modificador del que tenga más experiencia
+                    int modificadorContrario = 0;
+                    int modificadorMio= 0;
+                    if(expersoldcontrario>expersoldmio){
+                        modificadorContrario = (expersoldcontrario-expersoldmio)/100;
+                    } else {
+                        modificadorMio = (expersoldmio-expersoldcontrario)/100;
+                    }
+                    //crea los dados en base  a la experiencia
+                    int dadoContrario = (expersoldcontrario/100) + modificadorContrario;
+                    int dadoMio = (expersoldmio/100) + modificadorMio;
                     
-                    out.println("<table>");
-                        out.println("<tr>");
-                            out.println("<th>");
-                            out.print("daño");
-                            out.println("</th>");
-                            out.println("<th>");
-                            out.print("asalto");
-                            out.println("</th>");
-                            out.println("<th>");
-                            out.print("daño");
-                            out.println("</th>");
-                        out.println("</tr>");
-                        out.println("<tr>");
-                            out.println("<td>");
-                            out.print("daño");
-                            out.println("</td>");
-                            out.println("<td>");
-                            out.print("asalto");
-                            out.println("</td>");
-                            out.println("<td>");
-                            out.print("daño");
-                            out.println("</td>");
-                        out.println("</tr>");
-                    out.println("</table>");  
-                    conexion.close();
                 %>
+                <table>
+                    <tr>
+                        <th>daño<br><% out.print(nomsoldmio);%></th>
+                        <th>asalto</th>
+                        <th>daño<br><% out.print(nomsoldcontrario);%></th>
+                    </tr>
+                    <%
+                        //realiza las tiradas aleatorias y calcula el total
+                        int totalMio = 0;
+                        int totalContrario = 0;
+                        for(int x = 1; x <= 5; x++){
+                            out.print("<tr>");
+                                for(int i = 0; i < 3; i++){
+                                    int tiradaMia = (int)(Math.random()*dadoMio);
+                                    int tiradaContraria = (int)(Math.random()*dadoContrario);
+                                    if( i == 0){
+                                        out.print("<td>");
+                                        out.print(tiradaMia);
+                                        out.print("</td>");
+                                    } else if (i == 1) {
+                                        out.print("<td class=\"asalto\">");
+                                        out.print(x);
+                                        out.print("</td>");
+                                    } else if (i == 2){
+                                        out.print("<td>");
+                                        out.print(tiradaContraria);
+                                        out.print("</td>");
+                                    }
+                                    if(tiradaMia>tiradaContraria) {
+                                        totalMio++;
+                                    } else {
+                                        totalContrario++;
+                                    }
+                                }
+                            out.print("</tr>");
+                        }
+                        String ganador = " ";
+                        int codganador = 0;
+                            if(totalContrario>totalMio){
+                                ganador = nomsoldcontrario;
+                                codganador = contrario;
+                            } else {
+                                ganador = nomsoldmio;
+                                codganador = codsoldado;
+                            }
+                    %>
+                </table>
+                <div id="ganadorduelo">
+                    <h4>El ganador es: <% out.print(ganador); %></h4>
+                    <h5><% out.print(ganador); %> se lleva 100 monedas galácticas</h5>
+                </div>
+                    <%
+                        String update = "UPDATE SOLDADOS SET "
+                                   + " MONEDAS= MONEDAS +" + 100
+                                   + " WHERE CODSOLDADO=" + codsoldado;
+                        s.execute(update);
+                    %>
         </aside>
             <footer>
             <h6>E.F Megasupercorporation</h6>

@@ -98,6 +98,10 @@
                                    + " CONOCIMIENTO=" + request.getParameter("CONOCIMIENTO")
                                    + " WHERE CODSOLDADO=" + Integer.parseInt(request.getParameter("CODSOLDADO"));
                 s.execute(update);
+                update = "UPDATE SOLDADOS SET "
+                                   + " MONEDAS=" + request.getParameter("MONEDAS")
+                                   + " WHERE CODSOLDADO=" + Integer.parseInt(request.getParameter("CODSOLDADO"));
+                s.execute(update);
             %>
         </div>
             <div id="ficha">
@@ -182,7 +186,14 @@
                             <td>
                         <%
                             out.print(listado.getString("CONOCIMIENTO"));
-                            conexion.close();
+                        %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>monedas</th>
+                            <td>
+                        <%
+                            out.print(listado.getString("MONEDAS"));
                         %>
                             </td>
                         </tr>
