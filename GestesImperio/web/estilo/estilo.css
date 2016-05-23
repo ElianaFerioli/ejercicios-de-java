@@ -460,4 +460,18 @@ footer h6{
     margin-left: 8%;
     color: white;
 }
-
+a#volver{
+    background-color: #ffe207;
+    color: black;
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    width: 18%;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+}
+a#volver:hover{
+    background-color: black;
+    color: #ffe207;
+}

@@ -186,6 +186,7 @@
         </form>
         <footer>
             <h6>E.F Megasupercorporation</h6>
+            <a id="volver" href="../index.jsp">cambia de ejército</a>
         </footer>
         <img src="../imagenes/halcon.png" width="250px" id="halcon">
 </html>
